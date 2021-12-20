@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "{{ project-name }}",
+  "version": "1.0.0",
+  "description": "A template for kick starting a Cloudflare Workers project",
+  "module": "./dist/index.mjs",
+  "scripts": {
+    "build": "esbuild src/index.mjs --format=esm --bundle --minify --outfile=dist/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '**/*.{mjs,js,css,json,md}'"
+  },
+  "author": "{{ authors }}",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.14.5",
+    "prettier": "^2.5.1"
+  }
+}
