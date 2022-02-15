@@ -7,12 +7,16 @@
   "scripts": {
     "build": "esbuild src/index.mjs --format=esm --bundle --minify --outfile=dist/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write '**/*.{mjs,js,css,json,md}'"
+    "format": "prettier --write '**/*.{mjs,js,css,json,md,ts}'",
+    "lint": "eslint --fix '**/*.{mjs,js,ts}'"
   },
   "author": "{{ authors }}",
   "license": "MIT",
   "devDependencies": {
-    "esbuild": "^0.14.5",
-    "prettier": "^2.5.1"
+    "esbuild": "^0.14.21",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "2.5.1"
   }
 }
