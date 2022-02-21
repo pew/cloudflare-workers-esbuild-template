@@ -1,8 +1,8 @@
-# 👷 `worker-template` Hello World with esbuild
+# 👷 TypeSCript Hello World with esbuild
 
 A template for kick starting a Cloudflare worker project with esbuild.
 
-`src/index.mjs` is the content of the Workers script.
+`src/index.ts` is the content of the Workers script.
 
 ## Wrangler
 
@@ -19,9 +19,9 @@ Further documentation for Wrangler can be found [here](https://developers.cloudf
 ```
 available via `npm run-script`:
   build
-    esbuild src/index.mjs --format=esm --bundle --minify --outfile=dist/index.mjs
+    esbuild src/index.ts --format=esm --bundle --minify --outfile=dist/index.mjs
   format
-    prettier --write '**/*.{mjs,js,css,json,md,ts}'
+    prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'
   lint
-    eslint --fix '**/*.{mjs,js,ts}'
+    eslint --fix --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'
 ```
